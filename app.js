@@ -42,7 +42,7 @@ app.get('/',(req, res)=> {
 // },1000)
 
 
-cron.schedule("00 22 18 * * *", function(){
+cron.schedule("00 25 18 * * *", function(){
     console.log('2sssssssssssssssssssssssssss')
     // const response= await fetch(`https://sms.teamssprogram.com/api/send?key=78bf6e50275bfcaa0851ff26669421ba1bd7baba&phone=+639461991211&sim=2&message=${new Date()}`)
     // console.log(response)
