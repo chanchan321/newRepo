@@ -45,7 +45,7 @@ console.log('2'+new Date())
 
 cron.schedule("01 35 18 * * *", function(){
     console.log('2sssssssssssssssssssssssssss')
-    setcaw()
+     setcaw()
     // const response= await fetch(`https://sms.teamssprogram.com/api/send?key=78bf6e50275bfcaa0851ff26669421ba1bd7baba&phone=+639461991211&sim=2&message=${new Date()}`)
     // console.log(response)
     
@@ -53,7 +53,7 @@ cron.schedule("01 35 18 * * *", function(){
    timezone: "Asia/Manila"
  })
 
-async function setcaw(){
+const setcaw = async () => {
     const response= await fetch(`https://sms.teamssprogram.com/api/send?key=78bf6e50275bfcaa0851ff26669421ba1bd7baba&phone=+639461991211&sim=2&message=${new Date()}`)
     console.log(response)
 }
