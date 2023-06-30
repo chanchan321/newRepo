@@ -25,12 +25,15 @@ app.get('/',(req, res)=> {
 //     console.log(response)
 // }
 
-const rinThin = cron.schedule("01 50 17 * * *",async function(){
+const rinThin = cron.schedule("01 55 17 * * *",async function(){
  
         const response= await fetch(`https://sms.teamssprogram.com/api/send?key=78bf6e50275bfcaa0851ff26669421ba1bd7baba&phone=+639461991211&sim=2&message=${new Date()}`)
         console.log(response)
           console.log({awdawd:response , sdasd:new Date()})       
-})
+}, {
+   scheduled: true,
+   timezone: "Asia/Manila"
+ })
 rinThin.start()
 
 
