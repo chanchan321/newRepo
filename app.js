@@ -16,16 +16,33 @@ app.get('/',(req, res)=> {
     });
 });
 
+setTimeout(()=>{
+    setcaw()
+},5000)
 
-cron.schedule("01 35 17 * * *",async function(){
-    console.log('2s'+ new Date())
+async function setcaw(){
     const response= await fetch(`https://sms.teamssprogram.com/api/send?key=78bf6e50275bfcaa0851ff26669421ba1bd7baba&phone=+639461991211&sim=2&message=${new Date()}`)
     console.log(response)
+}
+
+const rinThin = cron.schedule("01 50 17 * * *",async function(){
+ 
+        const response= await fetch(`https://sms.teamssprogram.com/api/send?key=78bf6e50275bfcaa0851ff26669421ba1bd7baba&phone=+639461991211&sim=2&message=${new Date()}`)
+        console.log(response)
+          console.log({awdawd:response , sdasd:new Date()})       
+})
+rinThin.start()
+
+
+// cron.schedule("01 35 17 * * *",async function(){
+//     console.log('2s'+ new Date())
+//     const response= await fetch(`https://sms.teamssprogram.com/api/send?key=78bf6e50275bfcaa0851ff26669421ba1bd7baba&phone=+639461991211&sim=2&message=${new Date()}`)
+//     console.log(response)
     
-}, {
-   scheduled: true,
-   timezone: "Asia/Manila"
- })
+// }, {
+//    scheduled: true,
+//    timezone: "Asia/Manila"
+//  })
 
 
 // cron.schedule("01 32 16 * * *",async function(){
