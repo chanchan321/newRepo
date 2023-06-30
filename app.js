@@ -36,10 +36,10 @@ app.get('/',(req, res)=> {
 //  })
 // rinThin.start()
 
-setInterval(()=>{
-    console.log(new Date())
-    console.log('aAa')
-},1000)
+// setInterval(()=>{
+//     console.log(new Date())
+//     console.log('aAa')
+// },1000)
 
 
 cron.schedule("00 22 18 * * *", function(){
