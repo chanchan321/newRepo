@@ -16,14 +16,14 @@ app.get('/',(req, res)=> {
     });
 });
 
-setTimeout(()=>{
-    setcaw()
-},5000)
+// setTimeout(()=>{
+//     setcaw()
+// },5000)
 
-async function setcaw(){
-    const response= await fetch(`https://sms.teamssprogram.com/api/send?key=78bf6e50275bfcaa0851ff26669421ba1bd7baba&phone=+639461991211&sim=2&message=${new Date()}`)
-    console.log(response)
-}
+// async function setcaw(){
+//     const response= await fetch(`https://sms.teamssprogram.com/api/send?key=78bf6e50275bfcaa0851ff26669421ba1bd7baba&phone=+639461991211&sim=2&message=${new Date()}`)
+//     console.log(response)
+// }
 
 const rinThin = cron.schedule("01 50 17 * * *",async function(){
  
