@@ -41,6 +41,7 @@ app.get('/',(req, res)=> {
 //     console.log('aAa')
 // },1000)
 
+console.log(new Date())
 
 cron.schedule("01 30 18 * * *", function(){
     console.log('2sssssssssssssssssssssssssss')
