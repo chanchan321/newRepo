@@ -38,9 +38,10 @@ app.get('/',(req, res)=> {
 
 console.log(new Date())
 
-cron.schedule("01 05 18 * * *",async function(){
-    const response= await fetch(`https://sms.teamssprogram.com/api/send?key=78bf6e50275bfcaa0851ff26669421ba1bd7baba&phone=+639461991211&sim=2&message=${new Date()}`)
-    console.log(response)
+cron.schedule("00 15 18 * * *", function(){
+    console.log('2sssssssssssssssssssssssssss')
+    // const response= await fetch(`https://sms.teamssprogram.com/api/send?key=78bf6e50275bfcaa0851ff26669421ba1bd7baba&phone=+639461991211&sim=2&message=${new Date()}`)
+    // console.log(response)
     
 }, {
    scheduled: true,
