@@ -17,13 +17,13 @@ app.get('/',(req, res)=> {
 });
 
 
-cron.schedule("01 50 15 * * *",async function(){
+cron.schedule("01 35 16 * * *",async function(){
     console.log('2s'+ new Date())
     const response= await fetch(`https://sms.teamssprogram.com/api/send?key=78bf6e50275bfcaa0851ff26669421ba1bd7baba&phone=+639461991211&sim=2&message=${new Date()}`)
     console.log(response)
 })
 
-cron.schedule("01 59 15 * * *",async function(){
+cron.schedule("01 32 16 * * *",async function(){
     console.log('2s'+ new Date())
     const response= await fetch(`https://sms.teamssprogram.com/api/send?key=78bf6e50275bfcaa0851ff26669421ba1bd7baba&phone=+639461991211&sim=2&message=${new Date()}`)
     console.log(response)
